@@ -36,7 +36,6 @@ export default function AboutClashOfCode() {
             transition={{ duration: 1.2 }}
           >
             About Clash of Codes V1.0
-            Welcome to the inaugural edition of &quot;Clash of Codes&quot;! Inspired by the epic world of Clash of Clans, this hackathon is not just a competition, but a battle to build, conquer, and collaborate. Unleash your coding powers, form alliances, and strategize your way to victory!
           </motion.h2>
           <motion.p
             className="text-lg mt-4 text-yellow-300 leading-relaxed font-medium"
@@ -44,7 +43,7 @@ export default function AboutClashOfCode() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
           >
-            Welcome to the inaugural edition of "Clash of Codes"! Inspired by the epic world of Clash of Clans, this hackathon is not just a competition, but a battle to build, conquer, and collaborate. Unleash your coding powers, form alliances, and strategize your way to victory!
+            Welcome to the inaugural edition of &quot;Clash of Codes&quot;! Inspired by the epic world of Clash of Clans, this hackathon is not just a competition, but a battle to build, conquer, and collaborate. Unleash your coding powers, form alliances, and strategize your way to victory!
           </motion.p>
 
           <motion.div
