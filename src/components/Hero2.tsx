@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero2() {
   return (
-    <section className="relative h-screen flex flex-col md:flex-row items-center justify-around bg-black text-yellow-400 p-4">
+    <section className="relative h-screen flex flex-col md:flex-row items-center justify-center  bg-black text-yellow-400 p-4">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -18,9 +18,9 @@ export default function Hero2() {
       </div>
 
       {/* Left Section - Title, Subtitle, and Button */}
-      <div className="relative z-10 md:basis-[65%] p-4 md:p-12 flex flex-col items-center md:items-start text-center md:text-left">
+      <div className="relative z-10 basis-1/2 md:basis-[65%] p-2 md:p-12 flex flex-col items-center justify-center md:items-start text-center md:text-left">
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight font-clash-of-clans"
+          className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight font-clash-of-clans"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -28,7 +28,7 @@ export default function Hero2() {
           Clash of Codes
         </motion.h1>
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl mt-2 md:mt-4 font-clash-of-clans text-yellow-300"
+          className="text-xl sm:text-xl md:text-2xl lg:text-3xl mt-2 md:mt-4 font-clash-of-clans text-yellow-300"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
@@ -44,7 +44,7 @@ export default function Hero2() {
         >
           <a
             href="#register"
-            className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 md:py-3 md:px-6 rounded-full text-lg md:text-xl shadow-lg transition duration-300 transform hover:scale-105"
+            className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 md:py-3 md:px-6 rounded-full text-xl md:text-xl shadow-lg transition duration-300 transform hover:scale-105"
           >
             Join the Battle
           </a>
@@ -52,13 +52,13 @@ export default function Hero2() {
       </div>
 
       {/* Right Section - 3D Barbarian Image */}
-      <div className="relative z-10 md:basis-1/3 h-full flex justify-center items-center mt-6 md:mt-0">
+      <div className="relative z-10 md:basis-1/2 h-full flex justify-center items-center md:mt-0">
         {/* 3D Image of Barbarian */}
-        <div className="relative w-[200px] sm:w-[250px] md:w-[300px] lg:w-[400px]">
+        <div className="relative w-[300px] sm:w-[250px] md:w-[300px] lg:w-[400px]">
           <Image
             src="/images/barbian.png" // Replace with your actual 3D image path
             alt="Clash of Clans Barbarian"
-            className="object-fill w-full h-full"
+            className="object-cover w-full h-full"
             width={500}
             height={1000}
           />
