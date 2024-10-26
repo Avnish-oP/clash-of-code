@@ -2,7 +2,7 @@
 "use client";
 import { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -13,59 +13,106 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      className="bg-gradient-to-r from-black to-gray-900 py-4 px-6 flex items-center justify-between relative shadow-lg"
+      className="bg-gradient-to-r from-black to-gray-900 py-4 px-6 shadow-lg relative z-20"
     >
-      {/* Logo */}
-      <div className="text-yellow-400 font-bold text-2xl md:text-3xl font-clash-of-clans">
-        <Link href="/">
-          
+      <div className="container mx-auto flex items-center justify-between">
+        {/* Logo */}
+        <div className="text-yellow-400 font-bold text-2xl md:text-3xl font-clash-of-clans">
+          <Link href="/">
             <Image
               src='/images/logo.svg'
               alt="Clash of Codes Logo"
-              width={64}
-              height={64}
+              width={48}
+              height={48}
+              className="cursor-pointer"
             />
-          
-        </Link>
+          </Link>
+        </div>
+
+        {/* Hamburger Icon for Mobile */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle Menu"
+            className="text-yellow-400 hover:text-yellow-500 focus:outline-none"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex space-x-8 items-center">
+          <NavItem href="#home" title="Home" />
+          <NavItem href="#about" title="About" />
+          <NavItem href="#schedule" title="Schedule" />
+          <NavItem href="#register" title="Register" />
+        </div>
       </div>
 
-      {/* Hamburger Icon for Mobile */}
-      <div className="md:hidden">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-yellow-400 hover:text-yellow-500 focus:outline-none"
-        >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
+      {/* Mobile Menu with AnimatePresence for smooth transitions */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Backdrop Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.8 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black z-10"
+              onClick={() => setIsOpen(false)}
+            />
 
-      {/* Links */}
-      <div className={`md:flex space-x-8 items-center ${isOpen ? 'block' : 'hidden'} md:block`}>
-        <NavItem href="#home" title="Home" />
-        <NavItem href="#about" title="About" />
-        <NavItem href="#schedule" title="Schedule" />
-        <NavItem href="#register" title="Register" />
-      </div>
+            {/* Slide-in Menu */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 100 }}
+              className="fixed top-0 right-0 w-3/4 max-w-xs h-full bg-gradient-to-b from-gray-800 to-black p-8 z-20 flex flex-col"
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-yellow-400 ml-auto mb-4 hover:text-yellow-500 focus:outline-none"
+                aria-label="Close Menu"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+
+              <div className="space-y-6">
+                <NavItem href="#home" title="Home" onClick={() => setIsOpen(false)} />
+                <NavItem href="#about" title="About" onClick={() => setIsOpen(false)} />
+                <NavItem href="#schedule" title="Schedule" onClick={() => setIsOpen(false)} />
+                <NavItem href="#register" title="Register" onClick={() => setIsOpen(false)} />
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }
 
-// NavItem Component to avoid repetitive code
+// NavItem Component
 interface NavItemProps {
   href: string;
   title: string;
+  onClick?: () => void;
 }
 
-function NavItem({ href, title }: NavItemProps) {
+function NavItem({ href, title, onClick }: NavItemProps) {
   return (
     <Link href={href}>
       <motion.div
+        onClick={onClick}
         whileHover={{ scale: 1.1, color: '#FFD700' }}
         className="text-yellow-400 text-lg font-clash-of-clans hover:text-yellow-500 cursor-pointer transition-all duration-300 relative"
       >
-        <span className="before:absolute before:left-0 before:-bottom-1 before:h-1 before:w-full before:scale-x-0 before:bg-yellow-500 before:transition-transform before:duration-300 hover:before:scale-x-100">
+        <span className="relative hover:after:scale-x-100 after:absolute after:left-0 after:-bottom-1 after:h-1 after:w-full after:scale-x-0 after:bg-yellow-500 after:transition-transform after:duration-300">
           {title}
         </span>
       </motion.div>
