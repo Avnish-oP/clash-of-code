@@ -18,7 +18,7 @@ export default function Hero2() {
       </div>
 
       {/* Left Section - Title, Subtitle, and Button */}
-      <div className="relative z-10 basis-1/2 md:basis-[65%] p-2 md:p-12 flex flex-col items-center justify-center md:items-start text-center md:text-left">
+      <div className="relative mt-28 md:mt-12 z-10 basis-1/2 md:basis-[65%] p-2 md:p-12 flex flex-col items-center justify-center md:items-start text-center md:text-left">
         <motion.h1
           className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-tight font-clash-of-clans"
           initial={{ opacity: 0, x: -100 }}
@@ -52,9 +52,9 @@ export default function Hero2() {
       </div>
 
       {/* Right Section - 3D Barbarian Image */}
-      <div className="relative z-10 md:basis-1/2 h-full flex justify-center items-center md:mt-0">
+      <div className="relative z-10 md:mt-12 md:basis-1/2 h-full flex justify-center items-center ">
         {/* 3D Image of Barbarian */}
-        <div className="relative w-[300px] sm:w-[250px] md:w-[300px] lg:w-[400px]">
+        <div className="relative w-[90vw] sm:w-[250px] md:w-[400px] lg:w-[500px]">
           <Image
             src="/images/barbian.png" // Replace with your actual 3D image path
             alt="Clash of Clans Barbarian"
