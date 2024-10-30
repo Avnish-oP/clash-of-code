@@ -1,5 +1,4 @@
 import AboutClashOfCode from "@/components/AboutUs";
-import SimpleDivider from "@/components/Divider";
 import FAQ from "@/components/FAQs";
 import Hero2 from "@/components/Hero2";
 import Organizers from "@/components/Organizers";
