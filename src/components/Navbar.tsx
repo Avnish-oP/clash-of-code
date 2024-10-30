@@ -46,12 +46,12 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-8 items-center">
           
-          <NavItem href="/about" title="About" />
-          <NavItem href="/schedule" title="Schedule" />
-          <NavItem href="/sponsors" title="Sponsors" />
-          <NavItem href="/register" title="Register" />
-          <NavItem href="/prizes" title="Prizes" />
-          <NavItem href="/faq" title="FAQs" />
+          <NavItem href="#about" title="About" />
+          <NavItem href="#schedule" title="Schedule" />
+          <NavItem href="#sponsors" title="Sponsors" />
+          <NavItem href="https://clash-of-codes-v1.devfolio.co/" title="Register" />
+          <NavItem href="#prizes" title="Prizes" />
+          <NavItem href="#faq" title="FAQs" />
         </div>
       </div>
 
@@ -89,12 +89,12 @@ export default function Navbar() {
 
               <div className=" flex flex-col gap-4 items-end ">
                 
-                <NavItem href="/about" title="About" onClick={() => setIsOpen(false)} />
-                <NavItem href="/schedule" title="Schedule" onClick={() => setIsOpen(false)} />
-                <NavItem href="/sponsors" title="Sponsors" onClick={() => setIsOpen(false)} />
-                <NavItem href="/register" title="Register" onClick={() => setIsOpen(false)} />
-                <NavItem href="/prizes" title="Prizes" onClick={() => setIsOpen(false)} />
-                <NavItem href="/faq" title="FAQs" onClick={() => setIsOpen(false)} />
+                <NavItem href="#about" title="About" onClick={() => setIsOpen(false)} />
+                <NavItem href="#schedule" title="Schedule" onClick={() => setIsOpen(false)} />
+                <NavItem href="#sponsors" title="Sponsors" onClick={() => setIsOpen(false)} />
+                <NavItem href="https://clash-of-codes-v1.devfolio.co/" title="Register" onClick={() => setIsOpen(false)} />
+                <NavItem href="#prizes" title="Prizes" onClick={() => setIsOpen(false)} />
+                <NavItem href="#faq" title="FAQs" onClick={() => setIsOpen(false)} />
               </div>
             </motion.div>
           </motion.div>

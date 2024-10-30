@@ -10,6 +10,9 @@
 body {
   font-family: 'ClashOfClans', sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 @layer base {
   .font-clash-of-clans {

@@ -60,7 +60,7 @@ export default function Schedule() {
   }, []);
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-gray-800 to-gray-900 text-white overflow-hidden">
+    <section id="#schedule" className="relative py-20 bg-gradient-to-b from-gray-800 to-gray-900 text-white overflow-hidden">
       <div className="container mx-auto px-6 text-center">
         <motion.h2
           className="text-3xl md:text-5xl font-bold font-clash-of-clans mb-12"

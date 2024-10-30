@@ -2,6 +2,7 @@
 "use client"
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function AboutClashOfCode() {
   return (
@@ -55,9 +56,9 @@ export default function AboutClashOfCode() {
             <button className="bg-yellow-500 text-black py-3 px-5 rounded-full font-semibold text-lg sm:text-xl shadow-lg hover:bg-yellow-600 transition-transform transform hover:scale-105 cursor-pointer">
               Learn More
             </button>
-            <button className="bg-gray-800 text-yellow-400 py-3 px-5 rounded-full font-semibold text-lg sm:text-xl shadow-lg hover:bg-gray-700 transition-transform transform hover:scale-105 cursor-pointer">
+            <Link href={'https://clash-of-codes-v1.devfolio.co/'} className="bg-gray-800 text-yellow-400 py-3 px-5 rounded-full font-semibold text-lg sm:text-xl shadow-lg hover:bg-gray-700 transition-transform transform hover:scale-105 cursor-pointer">
               Register Now
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>

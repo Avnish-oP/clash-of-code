@@ -43,7 +43,7 @@ export default function Hero2() {
           transition={{ duration: 1.5, ease: 'easeInOut' }}
         >
           <a
-            href="#register"
+            href="https://clash-of-codes-v1.devfolio.co/"
             className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 md:py-3 md:px-6 rounded-full text-xl md:text-xl shadow-lg transition duration-300 transform hover:scale-105"
           >
             Join the Battle

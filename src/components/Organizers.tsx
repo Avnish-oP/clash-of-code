@@ -1,32 +1,37 @@
 // components/Organizers.js
-"use client"
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
 
 const organizers = [
   {
-    name: 'Avnish',
-    designation: 'Lead Organizer',
-    tagline: '“Coding is the weapon of modern conquest!”',
-    photo: '/images/Avnish.jpg',
+    name: "Avnish",
+    designation: "Lead Organizer",
+    tagline: "“Coding is the weapon of modern conquest!”",
+    photo: "/images/Avnish.jpg",
+    linkedin: "https://www.linkedin.com/in/avnish-gupta-23245a273/",
   },
   {
-    name: 'Purvesh Gupta',
-    designation: 'PR & Marketing Head',
-    tagline: '“Innovate, conquer, repeat.”',
-    photo: '/images/Purvesh.jpg',
+    name: "Purvesh Gupta",
+    designation: "PR & Marketing Head",
+    tagline: "“Innovate, conquer, repeat.”",
+    photo: "/images/Purvesh.jpg",
+    linkedin: "https://www.linkedin.com/in/purveshgupta/",
   },
   {
-    name: 'Bimlesh',
-    designation: 'Design Head',
-    tagline: '“A battle well designed is half won.”',
-    photo: '/images/Bimlesh.jpg',
+    name: "Bimlesh",
+    designation: "Design Head",
+    tagline: "“A battle well designed is half won.”",
+    photo: "/images/Bimlesh.jpg",
+    linkedin: "https://www.linkedin.com/in/bimlesharma/",
   },
   {
-    name: 'Kumar Ashutosh',
-    designation: 'Community Manager',
-    tagline: '“Success is crafted in the details.”',
-    photo: '/images/Ashutosh.jpg',
+    name: "Kumar Ashutosh",
+    designation: "Community Manager",
+    tagline: "“Success is crafted in the details.”",
+    photo: "/images/Ashutosh.jpg",
+    linkedin: "https://www.linkedin.com/in/kumar-ashutosh-09ab02270/",
   },
 ];
 
@@ -45,7 +50,7 @@ export default function Organizers() {
         <p className="text-lg mt-4 text-yellow-300 font-medium">
           Our masterminds behind the scenes, ready to bring this battle to life!
         </p>
-        
+
         {/* Organizers Grid */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {organizers.map((organizer, index) => (
@@ -70,9 +75,8 @@ export default function Organizers() {
               <p className="text-yellow-300 text-sm font-semibold">
                 {organizer.designation}
               </p>
-              <p className="text-yellow-500 italic mt-2">
-                {organizer.tagline}
-              </p>
+              <p className="text-yellow-500 italic mt-2">{organizer.tagline}</p>
+
               <div className="absolute inset-0 rounded-lg bg-yellow-500 opacity-0 transition-opacity duration-300 hover:opacity-10"></div>
             </motion.div>
           ))}
