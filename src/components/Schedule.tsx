@@ -101,7 +101,7 @@ export default function Schedule() {
                   <div
                     className={`relative max-w-xs p-6 rounded-lg shadow-lg ${
                       index % 2 === 0 ? "bg-yellow-600 text-black" : "bg-teal-600 text-black"
-                    } ${isPastEvent ? "opacity-60" : ""}`}
+                    } ${isPastEvent ? " brightness-50 " : ""}`}
                   >
                     <p className="text-sm font-medium">{item.date}</p>
                     <h3 className="text-xl font-bold font-clash-of-clans mt-2">{item.title}</h3>
