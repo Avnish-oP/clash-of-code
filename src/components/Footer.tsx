@@ -19,8 +19,12 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold text-yellow-400 mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#schedule" className="hover:text-yellow-400 transition-colors">Event Schedule</a></li>
+
+            <li><a href="#about" className="hover:text-yellow-400 transition-colors">About</a></li>
+            <li><a href="https://dorahacks.io/hackathon/cocv1/detail" className="hover:text-yellow-400 transition-colors">Register</a></li>
             <li><a href="#tracks" className="hover:text-yellow-400 transition-colors">Tracks</a></li>
+            <li><a href="#blockchain" className="hover:text-yellow-400 transition-colors">Bounty Hunt</a></li>
+            <li><a href="#schedule" className="hover:text-yellow-400 transition-colors">Event Schedule</a></li>
             <li><a href="#prizes" className="hover:text-yellow-400 transition-colors">Prizes</a></li>
             <li><a href="#faq" className="hover:text-yellow-400 transition-colors">FAQs</a></li>
             <li><a href="#sponsors" className="hover:text-yellow-400 transition-colors">Sponsors</a></li>
@@ -58,14 +62,14 @@ export default function Footer() {
       {/* Sponsor Logos */}
       <div className="mt-12 border-t border-gray-700 pt-6">
         <h3 className="text-center text-xl font-semibold text-yellow-400 mb-6">Proudly Sponsored By</h3>
-        <div className="flex justify-center space-x-6 text-sm">
+        <div className="flex justify-center items-center space-x-6 text-sm">
           <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
           <Image
                 src={'/images/devfolio-logo.png'}
                 alt="Devfolio"
                 width={80}
                 height={80}
-                className="mx-auto mb-4"
+                className="mx-auto mb-4 rounded-full border-2 border-yellow-400"
                 loading="lazy"
               />
           </a>
@@ -75,7 +79,7 @@ export default function Footer() {
                 alt="pwskills"
                 width={80}
                 height={80}
-                className="mx-auto mb-4"
+                className="mx-auto mb-4 rounded-full border-2 border-yellow-400"
                 loading="lazy"
               />
           </a>
@@ -85,7 +89,7 @@ export default function Footer() {
                 alt="interbuddy"
                 width={80}
                 height={80}
-                className="mx-auto mb-4"
+                className="mx-auto mb-4 rounded-full border-2 border-yellow-400"
                 loading="lazy"
               />
           </a>
@@ -95,7 +99,7 @@ export default function Footer() {
                 alt="risein"
                 width={80}
                 height={80}
-                className="mx-auto mb-4"
+                className="mx-auto mb-4 rounded-full border-2 border-yellow-400"
                 loading="lazy"
               />
           </a>
@@ -105,17 +109,17 @@ export default function Footer() {
                 alt="aptos"
                 width={80}
                 height={80}
-                className="mx-auto mb-4"
+                className="mx-auto mb-4 rounded-full border-2 border-yellow-400 object-contain"
                 loading="lazy"
               />
           </a>
           <a href="https://microsoft.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
           <Image
-                src={'/images/microsoft-logo.png'}
+                src={'/images/microsoft-logo2.png'}
                 alt="Microsoft"
                 width={80}
                 height={80}
-                className="mx-auto mb-4"
+                className="mx-auto mb-4 rounded-full border-2 border-yellow-400"
                 loading="lazy"
               />
           </a>

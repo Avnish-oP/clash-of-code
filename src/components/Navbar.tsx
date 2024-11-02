@@ -23,8 +23,8 @@ export default function Navbar() {
             <Image
               src='/images/logo.svg'
               alt="Clash of Codes Logo"
-              width={48}
-              height={48}
+              width={58}
+              height={58}
               className="cursor-pointer"
             />
           </Link>
@@ -47,10 +47,11 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-8 items-center">
           
           <NavItem href="#about" title="About" />
+          <NavItem href="https://dorahacks.io/hackathon/cocv1/detail" title="Register" />
+          <NavItem href="#blockchain" title="Bounty Hunt" />
           <NavItem href="#schedule" title="Schedule" />
-          <NavItem href="#sponsors" title="Sponsors" />
-          <NavItem href="https://clash-of-codes-v1.devfolio.co/" title="Register" />
           <NavItem href="#prizes" title="Prizes" />
+          <NavItem href="#sponsors" title="Sponsors" />
           <NavItem href="#faq" title="FAQs" />
         </div>
       </div>
