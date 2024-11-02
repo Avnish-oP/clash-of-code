@@ -23,8 +23,8 @@ export default function Navbar() {
             <Image
               src='/images/logo.svg'
               alt="Clash of Codes Logo"
-              width={58}
-              height={58}
+              width={68}
+              height={68}
               className="cursor-pointer"
             />
           </Link>

@@ -11,21 +11,21 @@ const schedule = [
   },
   {
     date: "November 7, 2024 11:59 PM",
-    title: "Registration Deadline",
-    description: "Make sure to register before the deadline to participate in the event.",
+    title: "Registration And Project Submission Deadline",
+    description: "Make sure to register and submit your project before the deadline.",
   },
-  {
-    date: "November 10, 2024 09:00 AM",
-    title: "Hackathon Begins",
-    description: "Start hacking on your projects and bring your ideas to life.",
-  },
+  // {
+  //   date: "November 10, 2024 09:00 AM",
+  //   title: "Hacking Begins",
+  //   description: "Start hacking on your projects and bring your ideas to life.",
+  // },
   {
     date: "November 11, 2024 09:00 AM",
-    title: "Project Demos & Evaluation",
-    description: "Present your projects to the judges and get feedback.",
+    title: "Project Evaluation",
+    description: "Judges will evaluate your projects and select the top 10 teams.",
   },
   {
-    date: "November 12, 2024 09:00 PM",
+    date: "November 13, 2024 09:00 PM",
     title: "Top 10 Announcement",
     description: "Find out who made it to the top 10 and get ready for the final round at Microsoft office.",
   },

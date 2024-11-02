@@ -25,7 +25,7 @@ export default function Hero2() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          Clash of Codes
+          Clash of Codes V1<span className=''>{'.'}</span>0
         </motion.h1>
         <motion.p
           className="text-xl sm:text-xl md:text-2xl lg:text-3xl mt-2 md:mt-4 font-clash-of-clans text-yellow-300"

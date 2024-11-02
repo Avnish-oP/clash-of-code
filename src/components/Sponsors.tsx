@@ -4,12 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const sponsors = [
-  { name: "Devfolio", logo: "/images/devfolio-logo.png", url: "https://devfolio.co" },
+  { name: "Dorahack", logo: "/images/dorahack-logo.jpg", url: "https://dorahacks.io/home" },
   { name: "PW Skills", logo: "/images/pwskills-logo.png", url: "https://pwskills.com" },
   { name: "Interview Buddy", logo: "/images/interviewbuddy-logo.jpeg", url: "https://interviewbuddy.com" },
   { name: "RiseIn", logo: "/images/risein-logo.jpg", url: "https://risein.com" },
   { name: "Aptos", logo: "/images/aptos-logo.png", url: "https://aptos.com" },
-  { name: "Microsoft Office Gurugram", logo: "/images/microsoft-logo.png", url: "https://microsoft.com" },
+  { name: "commudle", logo: "/images/commudle-logo.png", url: "https://www.commudle.com/" },
 ];
 
 export default function Sponsors() {
@@ -38,7 +38,7 @@ export default function Sponsors() {
                 alt={`${sponsor.name} logo`}
                 width={120}
                 height={60}
-                className="mx-auto mb-4"
+                className="mx-auto mb-4 rounded-full"
                 loading="lazy"
               />
               <p className="text-xl font-semibold">{sponsor.name}</p>

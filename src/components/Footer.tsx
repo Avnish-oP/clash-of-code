@@ -1,6 +1,6 @@
 // components/Footer.js
 import Image from 'next/image';
-import { FaTwitter, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -45,8 +45,8 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold text-yellow-400 mb-4">Connect with Us</h3>
           <div className="flex space-x-4 text-lg">
-            <a href="https://x.com/Avnish_gupta_45" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">
-              <FaTwitter />
+            <a href="https://chat.whatsapp.com/ItK1eoIlBl6FDvLV7iqz7Y" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">
+              <FaWhatsapp />
             </a>
             <a href="https://www.linkedin.com/company/technexus-community/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">
               <FaLinkedin />
@@ -63,9 +63,9 @@ export default function Footer() {
       <div className="mt-12 border-t border-gray-700 pt-6">
         <h3 className="text-center text-xl font-semibold text-yellow-400 mb-6">Proudly Sponsored By</h3>
         <div className="flex justify-center items-center space-x-6 text-sm">
-          <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+          <a href="https://dorahacks.io/home" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
           <Image
-                src={'/images/devfolio-logo.png'}
+                src={'/images/dorahack-logo.jpg'}
                 alt="Devfolio"
                 width={80}
                 height={80}
@@ -113,9 +113,9 @@ export default function Footer() {
                 loading="lazy"
               />
           </a>
-          <a href="https://microsoft.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+          <a href="https://www.commudle.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
           <Image
-                src={'/images/microsoft-logo2.png'}
+                src={'/images/commudle-logo.png'}
                 alt="Microsoft"
                 width={80}
                 height={80}

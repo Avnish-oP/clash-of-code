@@ -6,28 +6,29 @@ import { FaTrophy, FaMedal, FaAward, FaGem } from "react-icons/fa"; // Adding ic
 const prizeData = [
   {
     title: "Total Prize Pool",
-    amount: "$5000",
+    amount: "$1000",
     description: "Epic prizes await the champions!",
     icon: <FaGem size={50} />,
   },
   {
     title: "Winner",
-    amount: "$3000",
+    amount: "Revealing soon...",
     description: "Glory and grandeur for the champion team!",
     icon: <FaTrophy size={40} />,
   },
   {
     title: "Runner-Up",
-    amount: "$1500",
+    amount: "Revealing soon...",
     description: "A well-fought victory deserves recognition!",
     icon: <FaMedal size={40} />,
   },
   {
-    title: "Second Runner-Up",
-    amount: "$500",
-    description: "Fantastic effort with a prize to show for it!",
+    title: "Top 10",
+    amount: "Everyone will get swags and goodies",
+    description: "Recognition for the top 10 teams!",
     icon: <FaAward size={40} />,
   },
+  
 ];
 
 export default function Prizes() {
@@ -82,8 +83,8 @@ export default function Prizes() {
               />
               <div className="relative z-10 text-yellow-400 mb-4">{prize.icon}</div>
               <h4 className="text-2xl font-bold text-yellow-400">{prize.title}</h4>
-              <p className="text-4xl font-extrabold text-white mt-2">{prize.amount}</p>
-              <p className="mt-2 text-gray-300">{prize.description}</p>
+              <p className="text-4xl font-medium text-white mt-2">{prize.amount}</p>
+              <p className="mt-2 font-thin text-gray-300">{prize.description}</p>
             </motion.div>
           ))}
         </div>
