@@ -10,6 +10,7 @@ const sponsors = [
   { name: "RiseIn", logo: "/images/risein-logo.jpg", url: "https://risein.com" },
   { name: "Aptos", logo: "/images/aptos-logo.png", url: "https://aptos.com" },
   { name: "commudle", logo: "/images/commudle-logo.png", url: "https://www.commudle.com/" },
+  { name: "TechCanvas", logo: "/images/techcanvas-logo.png", url: "https://techcanvas.org/" },
 ];
 
 export default function Sponsors() {
@@ -25,7 +26,7 @@ export default function Sponsors() {
           Our Sponsors
         </motion.h2>
 
-        <div className="max-w-4xl grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="max-w-4xl grid grid-cols-2 md:grid-cols-3  gap-8">
           {sponsors.map((sponsor, index) => (
             <motion.div
               key={index}

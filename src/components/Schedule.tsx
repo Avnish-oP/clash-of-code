@@ -10,7 +10,7 @@ const schedule = [
     description: "Welcome to the Clash of Codes! Start with registration and an exciting opening ceremony.",
   },
   {
-    date: "November 7, 2024 11:59 PM",
+    date: "November 10, 2024 11:59 PM",
     title: "Registration And Project Submission Deadline",
     description: "Make sure to register and submit your project before the deadline.",
   },
@@ -25,7 +25,7 @@ const schedule = [
     description: "Judges will evaluate your projects and select the top 10 teams.",
   },
   {
-    date: "November 13, 2024 09:00 PM",
+    date: "November 12, 2024 09:00 PM",
     title: "Top 10 Announcement",
     description: "Find out who made it to the top 10 and get ready for the final round at Microsoft office.",
   },
