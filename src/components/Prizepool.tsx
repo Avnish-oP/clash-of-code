@@ -12,13 +12,13 @@ const prizeData = [
   },
   {
     title: "Winner",
-    amount: "Revealing soon...",
-    description: "Glory and grandeur for the champion team!",
+    amount: "7000 INR + Goodies and Swags",
+    description: "The ultimate champion deserves the ultimate prize!",
     icon: <FaTrophy size={40} />,
   },
   {
     title: "Runner-Up",
-    amount: "Revealing soon...",
+    amount: "5000 INR + Goodies and Swags",
     description: "A well-fought victory deserves recognition!",
     icon: <FaMedal size={40} />,
   },

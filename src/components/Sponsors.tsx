@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 
 const sponsors = [
   { name: "Dorahack", logo: "/images/dorahack-logo.jpg", url: "https://dorahacks.io/home" },
+  { name: "TechCanvas", logo: "/images/techcanvas-logo.jpeg", url: "https://techcanvas.org/" },
   { name: "PW Skills", logo: "/images/pwskills-logo.png", url: "https://pwskills.com" },
   { name: "Interview Buddy", logo: "/images/interviewbuddy-logo.jpeg", url: "https://interviewbuddy.com" },
   { name: "RiseIn", logo: "/images/risein-logo.jpg", url: "https://risein.com" },
   { name: "Aptos", logo: "/images/aptos-logo.png", url: "https://aptos.com" },
   { name: "commudle", logo: "/images/commudle-logo.png", url: "https://www.commudle.com/" },
-  { name: "TechCanvas", logo: "/images/techcanvas-logo.png", url: "https://techcanvas.org/" },
+  
 ];
 
 export default function Sponsors() {

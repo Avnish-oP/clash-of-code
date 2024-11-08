@@ -37,7 +37,7 @@ export default function Footer() {
           <p className="text-sm">Got questions? Reach out to us for any queries about the event or participation.</p>
           <ul className="space-y-2 mt-4 text-sm">
             <li><FaEnvelope className="inline mr-2" />technexus.community2024@gmail.com</li>
-            <li>Location: Microsoft Office, Gurugram</li>
+            {/* <li>Location: Microsoft Office, Gurugram</li> */}
           </ul>
         </div>
 
@@ -66,6 +66,16 @@ export default function Footer() {
           <a href="https://dorahacks.io/home" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
           <Image
                 src={'/images/dorahack-logo.jpg'}
+                alt="Devfolio"
+                width={80}
+                height={80}
+                className="mx-auto mb-4 rounded-full border-2 border-yellow-400"
+                loading="lazy"
+              />
+          </a>
+          <a href="https://techcanvass.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+          <Image
+                src={'/images/techcanvas-logo.jpeg'}
                 alt="Devfolio"
                 width={80}
                 height={80}

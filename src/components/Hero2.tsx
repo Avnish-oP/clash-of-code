@@ -90,9 +90,9 @@ export default function Hero2() {
         >
           <span className="text-white">Powered by</span>
           <Image
-            src="/images/techcanvas-logo.png"
+            src="/images/techcanvas-logo.jpg"
             alt="Tech Canvas Logo"
-            width={40}
+            width={150}
             height={40}
             className="ml-1"
           />
