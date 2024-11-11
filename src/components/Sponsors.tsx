@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const sponsors = [
   { name: "Dorahack", logo: "/images/dorahack-logo.jpg", url: "https://dorahacks.io/home" },
-  { name: "TechCanvas", logo: "/images/techcanvas-logo.jpeg", url: "https://techcanvas.org/" },
+  { name: "TechCanvass", logo: "/images/techcanvas-logo.jpeg", url: "https://techcanvass.com/" },
   { name: "PW Skills", logo: "/images/pwskills-logo.png", url: "https://pwskills.com" },
   { name: "Interview Buddy", logo: "/images/interviewbuddy-logo.jpeg", url: "https://interviewbuddy.com" },
   { name: "RiseIn", logo: "/images/risein-logo.jpg", url: "https://risein.com" },

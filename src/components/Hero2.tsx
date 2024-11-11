@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero2() {
-  const registrationDeadline = new Date("November 09, 2024 23:59:59").getTime();
+  const registrationDeadline = new Date("November 10, 2024 23:59:59").getTime();
   const [timeRemaining, setTimeRemaining] = useState<string>("");
   const [isTimeCritical, setIsTimeCritical] = useState<boolean>(false);
 
