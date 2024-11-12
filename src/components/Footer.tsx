@@ -133,6 +133,16 @@ export default function Footer() {
                 loading="lazy"
               />
           </a>
+          <a href="https://bugdetector.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+          <Image
+                src={'/images/bugdetector-logo.jpg'}
+                alt="bugdetector"
+                width={80}
+                height={80}
+                className="mx-auto mb-4 rounded-full border-2 border-yellow-400"
+                loading="lazy"
+              />
+          </a>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 // components/GoldSponsor.js
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function GoldSponsor() {
@@ -29,8 +30,15 @@ export default function GoldSponsor() {
       ></div>
 
       {/* Heading */}
+      <Image
+          src="/images/bugdetector-logo.jpg" // Replace with actual logo path
+          alt="Tech Canvas Logo"
+          width={200}
+          height={200}
+          className="rounded-full shadow-lg p-2 mb-8 bg-white"
+        />
       <motion.h2
-        className="text-4xl md:text-5xl font-bold mb-6 font-clash-of-clans tracking-wider"
+        className="text-4xl text-center md:text-5xl font-bold mb-6 font-clash-of-clans tracking-wider"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
