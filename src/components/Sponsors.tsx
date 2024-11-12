@@ -11,7 +11,7 @@ const sponsors = [
   { name: "RiseIn", logo: "/images/risein-logo.jpg", url: "https://risein.com" },
   { name: "Aptos", logo: "/images/aptos-logo.png", url: "https://aptos.com" },
   { name: "commudle", logo: "/images/commudle-logo.png", url: "https://www.commudle.com/" },
-  { name: "Bug Detector", logo: "/images/bugdetector-logo.jpg", url: "https://bugdetector.com" },
+  { name: "Bug Detector", logo: "/images/bugdetector-logo.jpg", url: "https://academy.bugdetector.in/about" },
   
 ];
 

@@ -133,7 +133,7 @@ export default function Footer() {
                 loading="lazy"
               />
           </a>
-          <a href="https://bugdetector.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+          <a href="https://academy.bugdetector.in/about" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
           <Image
                 src={'/images/bugdetector-logo.jpg'}
                 alt="bugdetector"

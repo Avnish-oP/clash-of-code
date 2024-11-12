@@ -63,7 +63,7 @@ export default function GoldSponsor() {
         transition={{ duration: 1.5 }}
       >
         <a
-          href="https://detector.dev"
+          href="https://academy.bugdetector.in/about"
           className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full text-lg md:text-xl shadow-lg transition duration-300 transform hover:scale-105"
           target="_blank"
           rel="noopener noreferrer"
