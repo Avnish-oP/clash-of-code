@@ -54,7 +54,7 @@ export default function Hero2() {
       </div>
 
       {/* Left Section */}
-      <div className="relative z-10 basis-1/2 p-4 mt-14 bg-pink-600 text-center w-full">
+      <div className="relative z-10 basis-1/2 p-4 mt-14 text-center w-full">
         {/* Tech Nexus Logo */}
         <motion.div
           className="flex flex-col gap-4 items-center justify-center md:justify-start mb-2"
@@ -103,7 +103,7 @@ export default function Hero2() {
       </div>
 
       {/* Right Section */}
-      <div className="relative z-10 md:basis-1/2 flex mt-5 flex-col items-center bg-blue-600">
+      <div className="relative z-10 md:basis-1/2 flex mt-5 flex-col items-center">
         {/* Timer */}
         <motion.div
           className="text-center mb-8"
