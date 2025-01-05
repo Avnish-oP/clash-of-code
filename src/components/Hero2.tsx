@@ -1,13 +1,17 @@
-// components/Hero2.js
 "use client";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero2() {
-  const registrationDeadline = new Date("November 10, 2024 23:59:59").getTime();
-  const [timeRemaining, setTimeRemaining] = useState<string>("");
-  const [isTimeCritical, setIsTimeCritical] = useState<boolean>(false);
+  const registrationDeadline = new Date("January 11, 2025 23:59:59").getTime();
+  const [timeRemaining, setTimeRemaining] = useState({
+    days: "00",
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,15 +20,20 @@ export default function Hero2() {
 
       if (distance < 0) {
         clearInterval(interval);
-        setTimeRemaining("Registration Closed");
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        setIsTimeCritical(hours + days * 24 > 12); // Color timer text green if more than 12 hours remain
-        setTimeRemaining(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+        setTimeRemaining({
+          days: days.toString().padStart(2, "0"),
+          hours: hours.toString().padStart(2, "0"),
+          minutes: minutes.toString().padStart(2, "0"),
+          seconds: seconds.toString().padStart(2, "0"),
+        });
       }
     }, 1000);
 
@@ -32,23 +41,23 @@ export default function Hero2() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-around bg-black text-yellow-400 p-4">
-      {/* Background Image */}
+    <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-around bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white p-6 overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={"/images/clash-background.png"}
-          alt="Clash of Clans Style Background"
+          src={"/images/bg.jpg"}
+          alt="Background"
           className="w-full h-full object-cover opacity-40 filter blur-sm"
           width={1920}
           height={1080}
         />
       </div>
 
-      {/* Left Section - Title, Subtitle, and Button */}
-      <div className="relative mt-16 md:mt-12 z-10 basis-1/2 p-4 md:p-8 flex flex-col items-center justify-center md:items-center text-center">
-        {/* Tech Nexus Logo and "presents" */}
+      {/* Left Section */}
+      <div className="relative z-10 basis-1/2 p-4 text-center">
+        {/* Tech Nexus Logo */}
         <motion.div
-          className="text-lg md:text-2xl font-semibold mb-2 flex flex-col items-center justify-center"
+          className="flex flex-col gap-4 items-center justify-center md:justify-start mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -56,24 +65,24 @@ export default function Hero2() {
           <Image
             src="/images/technexus-logo.png"
             alt="Tech Nexus Logo"
-            width={100}
-            height={100}
-            className="mb-2"
+            width={80}
+            height={80}
+            className="mr-2"
           />
-          <span className="text-white mb-4 text-sm">presents</span>
+          <span className="text-sm mb-4 text-white">presents</span>
         </motion.div>
 
-        {/* Main Title */}
+        {/* Title */}
         <motion.h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight font-clash-of-clans drop-shadow-lg"
+          className="text-4xl sm:text-6xl md:text-7xl font-bold text-white font-clash-of-clans"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          Clash of Codes V1.0
+          Clash of Codes v<span className="text-blue-500">2.0</span> 
         </motion.h1>
         <motion.p
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-2 md:mt-4 font-clash-of-clans text-yellow-300"
+          className="text-xl md:text-2xl mt-4 text-white"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
@@ -81,77 +90,92 @@ export default function Hero2() {
           Code. Conquer. Collaborate.
         </motion.p>
 
-        {/* "Powered by Tech Canvas" with Logo */}
-        <motion.div
-          className="mt-2 md:mt-4 mb-4 text-lg font-semibold text-yellow-300 flex items-center justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <span className="text-white">Powered by</span>
-          <Image
-            src="/images/techcanvas-logo.jpg"
-            alt="Tech Canvas Logo"
-            width={150}
-            height={40}
-            className="ml-1"
-          />
-        </motion.div>
-
-        <motion.div
-          className="mt-2 md:mt-4"
+        {/* Call to Action */}
+        <motion.a
+          href="https://dorahacks.io/hackathon/cocv2/detail"
+          className="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-white/50 hover:scale-105 transition-transform duration-300"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ duration: 1.5 }}
         >
-          <a
-            href="https://dorahacks.io/hackathon/cocv1/detail"
-            className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 md:py-3 md:px-6 rounded-full text-xl md:text-xl shadow-lg transition duration-300 transform hover:scale-105"
-          >
-            Join the Battle
-          </a>
-        </motion.div>
+          Join the Battle
+        </motion.a>
       </div>
 
-      {/* Right Section - Timer and 3D Barbarian Image */}
-      <div className="relative z-10 md:mt-24 md:basis-1/2 h-full flex flex-col items-center justify-center">
-        {/* Countdown Timer */}
+      {/* Right Section */}
+      <div className="relative z-10 md:basis-1/2 flex mt-16 flex-col items-center">
+        {/* Timer */}
         <motion.div
-          className={`text-2xl md:text-5xl font-bold flex flex-col items-center mb-4 ${isTimeCritical ? "text-green-500" : "text-red-400"} drop-shadow-md`}
+          className="text-center mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <span className="text-yellow-300 text-lg md:text-2xl mb-2">Registration Ends In</span>
-          <div className="flex space-x-4 text-center">
-            <div className="p-2 md:p-4 bg-gray-900 bg-opacity-75 rounded-lg shadow-lg">
-              <span className="block text-lg md:text-3xl">{timeRemaining}</span>
+          <p className="text-lg md:text-2xl text-blue-400 antialiased mb-4">
+            Registration Ends In
+          </p>
+          <div className="flex gap-4  p-4 rounded-lg shadow-lg">
+            <div className="flex justify-center items-center">
+              <div className="flex flex-col min-w-20 items-center shadow-md bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-lg">
+                <span className="text-3xl font-bold text-white">
+                  {timeRemaining.days}
+                </span>
+                <span className="text-sm text-gray-200">Days</span>
+              </div>
+              <span className="text-3xl ml-4 text-gray-200">:</span>
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="flex flex-col min-w-20 items-center shadow-md bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-lg">
+                <span className="text-3xl font-bold text-white">
+                  {timeRemaining.hours}
+                </span>
+                <span className="text-sm text-gray-200">Hours</span>
+              </div>
+              <span className="text-3xl ml-4 text-gray-200">: </span>
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="flex  flex-col min-w-20 items-center shadow-md bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-lg">
+                <span className="text-3xl font-bold text-white">
+                  {timeRemaining.minutes}
+                </span>
+                <span className="text-sm text-gray-200">Mins</span>
+              </div>
+              <span className="text-3xl ml-4 text-gray-200">: </span>
+            </div>
+            <div className="flex  justify-center items-center">
+              <div className="flex flex-col min-w-20 items-center shadow-md bg-white/90 p-4 rounded-lg">
+                <span className="text-3xl font-bold text-blue-600">
+                  {timeRemaining.seconds}
+                </span>
+                <span className="text-sm text-blue-600">Sec</span>
+              </div>
+              
             </div>
           </div>
         </motion.div>
 
-        {/* 3D Image of Barbarian */}
+        {/* Barbarian Image */}
         <motion.div
-          className="relative w-[90vw] sm:w-[250px] md:w-[400px] lg:w-[500px]"
+          className="relative w-3/4 sm:w-1/2 lg:w-1/3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
           <Image
-            src="/images/barbian.png"
-            alt="Clash of Clans Barbarian"
-            className="object-cover w-full h-full drop-shadow-lg"
-            width={500}
-            height={1000}
+            src="/images/queen.png"
+            alt="Barbarian"
+            className="object-contain"
+            width={400}
+            height={400}
           />
         </motion.div>
 
-        {/* Background Barbarian Image with White Filter */}
-        <div className="absolute inset-0 opacity-70 md:opacity-90 filter blur-lg z-0">
+        {/* Background Blur Barbarian */}
+        <div className="absolute inset-0 opacity-50 filter blur-lg z-0">
           <Image
             src="/images/barbian.png"
-            alt="Clash of Clans Barbarian Background"
-            className="object-cover opacity-20"
+            alt="Background Barbarian"
+            className="object-contain opacity-20"
             width={800}
             height={800}
           />
