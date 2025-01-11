@@ -1,79 +1,94 @@
-// components/Tracks.js
-"use client"
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const tracks = [
   {
-    name: 'AI & Machine Learning',
-    description: 'Build intelligent systems that can learn, adapt, and enhance user experiences.',
-    icon: '/images/AI.png',
+    name: "AI & Machine Learning",
+    description: "Build intelligent systems that can learn, adapt, and enhance user experiences.",
+    icon: "/images/AI.png",
   },
   {
-    name: 'Web Development',
-    description: 'Create dynamic, responsive websites that are both aesthetic and functional.',
-    icon: '/images/web-development.png',
+    name: "Web Development",
+    description: "Create dynamic, responsive websites that are both aesthetic and functional.",
+    icon: "/images/web-development.png",
   },
   {
-    name: 'Blockchain & Web3',
-    description: 'Dive into the world of decentralized applications and secure digital transactions.',
-    icon: '/images/blockchain-icon.png',
+    name: "Blockchain & Web3",
+    description: "Dive into the world of decentralized applications and secure digital transactions.",
+    icon: "/images/blockchain-icon.png",
   },
   {
-    name: 'Internet of Things',
-    description: 'Connect devices and sensors to the cloud to automate tasks and improve efficiency.',
-    icon: '/images/iot-icon.png',
+    name: "Internet of Things",
+    description: "Connect devices and sensors to the cloud to automate tasks and improve efficiency.",
+    icon: "/images/iot-icon.png",
   },
 ];
 
 export default function Tracks() {
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900 text-yellow-400">
-      <div className="container mx-auto px-6 md:px-12 text-center">
-        <motion.h2
-          className="text-3xl md:text-5xl font-bold font-clash-of-clans"
+    <section className="py-20 bg-gradient-to-b from-gray-900 via-black to-gray-800">
+      <div className="container mx-auto px-6 md:px-12">
+        {/* Title Section */}
+        <motion.div
+          className="text-center mb-12"
           initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          Explore Our Tracks
-        </motion.h2>
-        <p className="text-lg mt-4 text-yellow-300 font-medium">
-          Choose a track that aligns with your skills and interests to conquer new challenges.
-        </p>
+          <h2 className="text-4xl md:text-5xl font-bold font-clash-of-clans text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+            Explore Our Tracks
+          </h2>
+          <p className="text-lg mt-4 text-gray-300">
+            Choose your path to innovation and conquer new challenges.
+          </p>
+        </motion.div>
 
-        {/* Stacked Card Track Layout */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        {/* Card Grid */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.2 }}
+        >
           {tracks.map((track, index) => (
             <motion.div
               key={index}
-              className="group relative transform transition-transform duration-300 hover:scale-105 cursor-pointer"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
+              className="group relative bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl hover:shadow-cyan-400 transition-all duration-300"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
             >
-              {/* Card Stack with Rotated Layers */}
-              <div className="absolute inset-0 bg-gray-700 opacity-30 rounded-lg rotate-[3deg] group-hover:rotate-[0deg] transition-all duration-300"></div>
-              <div className="absolute inset-0 bg-gray-600 opacity-20 rounded-lg rotate-[6deg] group-hover:rotate-[0deg] transition-all duration-300"></div>
-              <div className="relative z-10 bg-gray-800 rounded-lg shadow-2xl p-8 text-center transition-transform transform hover:-translate-y-2">
-                <div className="relative w-16 h-16 mx-auto mb-4">
+              {/* Icon */}
+              <div className="flex justify-center items-center mb-6">
+                <div className="relative w-16 h-16 md:w-20 md:h-20">
                   <Image
                     src={track.icon}
                     alt={track.name}
-                    layout="fill"
-                    objectFit="contain"
+                    width={80}
+                    height={80}
+                    className="rounded-lg drop-shadow-lg"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-yellow-400">
-                  {track.name}
-                </h3>
-                <p className="text-yellow-300 text-sm mt-2 font-medium">
-                  {track.description}
-                </p>
               </div>
+              {/* Track Title */}
+              <h3 className="text-xl font-semibold text-cyan-400 text-center mb-2">
+                {track.name}
+              </h3>
+              {/* Description */}
+              <p className="text-sm text-gray-300 text-center">{track.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
+      </div>
+
+      {/* Background Enhancements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-cyan-500 to-transparent blur-[150px] opacity-20"></div>
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-blue-500 to-transparent blur-[150px] opacity-20"></div>
       </div>
     </section>
   );

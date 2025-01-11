@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero2() {
-  const registrationDeadline = new Date("January 11, 2025 23:59:59").getTime();
+  const registrationDeadline = new Date("January 14, 2025 23:59:59").getTime();
   const [timeRemaining, setTimeRemaining] = useState({
     days: "00",
     hours: "00",
@@ -54,10 +54,10 @@ export default function Hero2() {
       </div>
 
       {/* Left Section */}
-      <div className="relative z-10 basis-1/2 p-4 mt-14 text-center w-full">
+      <div className="relative z-10 basis-1/2 p-4 text-center">
         {/* Tech Nexus Logo */}
         <motion.div
-          className="flex flex-col gap-4 items-center justify-center md:justify-start mb-2"
+          className="flex flex-col gap-4 items-center justify-center md:justify-start mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -65,11 +65,11 @@ export default function Hero2() {
           <Image
             src="/images/technexus-logo.png"
             alt="Tech Nexus Logo"
-            width={90}
-            height={90}
+            width={80}
+            height={80}
             className="mr-2"
           />
-          <span className="text-sm mb-2 text-white">presents</span>
+          <span className="text-sm mb-4 text-white">presents</span>
         </motion.div>
 
         {/* Title */}
@@ -92,7 +92,7 @@ export default function Hero2() {
 
         {/* Call to Action */}
         <motion.a
-          href="https://dorahacks.io/hackathon/cocv2"
+          href="https://dorahacks.io/hackathon/cocv2/detail"
           className="mt-6 inline-block bg-white text-black font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-white/50 hover:scale-105 transition-transform duration-300"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -103,7 +103,7 @@ export default function Hero2() {
       </div>
 
       {/* Right Section */}
-      <div className="relative z-10 md:basis-1/2 flex mt-5 flex-col items-center">
+      <div className="relative z-10 md:basis-1/2 flex mt-16 flex-col items-center">
         {/* Timer */}
         <motion.div
           className="text-center mb-8"
@@ -111,13 +111,12 @@ export default function Hero2() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          <p className="text-lg md:text-2xl text-blue-400  antialiased mb-4">
+          <p className="text-lg md:text-2xl text-blue-400 antialiased mb-4">
             Registration Ends In
           </p>
-
-          <div className="flex gap-4 scale-75 md:scale-90 lg:scale-100 bg-blue-950/40 p-4 rounded-lg shadow-lg">
+          <div className="flex gap-4  p-4 rounded-lg shadow-lg">
             <div className="flex justify-center items-center">
-              <div className="flex flex-col w-20 items-center shadow-md bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-lg">
+              <div className="flex flex-col min-w-20 items-center shadow-md bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-lg">
                 <span className="text-3xl font-bold text-white">
                   {timeRemaining.days}
                 </span>
@@ -126,7 +125,7 @@ export default function Hero2() {
               <span className="text-3xl ml-4 text-gray-200">:</span>
             </div>
             <div className="flex justify-center items-center">
-              <div className="flex flex-col w-20 items-center shadow-md bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-lg">
+              <div className="flex flex-col min-w-20 items-center shadow-md bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-lg">
                 <span className="text-3xl font-bold text-white">
                   {timeRemaining.hours}
                 </span>
@@ -135,7 +134,7 @@ export default function Hero2() {
               <span className="text-3xl ml-4 text-gray-200">: </span>
             </div>
             <div className="flex justify-center items-center">
-              <div className="flex  flex-col w-20 items-center shadow-md bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-lg">
+              <div className="flex  flex-col min-w-20 items-center shadow-md bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-lg">
                 <span className="text-3xl font-bold text-white">
                   {timeRemaining.minutes}
                 </span>
@@ -144,7 +143,7 @@ export default function Hero2() {
               <span className="text-3xl ml-4 text-gray-200">: </span>
             </div>
             <div className="flex  justify-center items-center">
-              <div className="flex flex-col w-20 items-center shadow-md bg-white/90 p-4 rounded-lg">
+              <div className="flex flex-col min-w-20 items-center shadow-md bg-white/90 p-4 rounded-lg">
                 <span className="text-3xl font-bold text-blue-600">
                   {timeRemaining.seconds}
                 </span>
@@ -157,7 +156,7 @@ export default function Hero2() {
 
         {/* Barbarian Image */}
         <motion.div
-          className="relative w-1/2 sm:w-1/2 lg:w-1/3"
+          className="relative w-3/4 sm:w-1/2 lg:w-1/3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
