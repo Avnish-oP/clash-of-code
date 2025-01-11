@@ -4,34 +4,34 @@ import { motion } from "framer-motion";
 
 const schedule = [
   {
-    date: "January 10, 2025 10:00 AM",
-    title: "Kick-Off & Opening Ceremony",
+    date: "January 1, 2025 10:00 AM",
+    title: "Registration Opens",
     description: "Welcome to Clash of Code v2.0! Get ready for an exciting start.",
   },
   {
-    date: "January 15, 2025 11:59 PM",
+    date: "January 14, 2025 11:59 PM",
     title: "Registration Deadline",
     description: "Ensure your team is registered before the deadline.",
   },
   {
-    date: "January 20, 2025 09:00 AM",
-    title: "Hackathon Begins",
-    description: "Start building your innovative solutions.",
+    date: "January 15, 2025 09:00 AM",
+    title: "Project submission deadline",
+    description: "Submit your project before the deadline to qualify for the finals.",
   },
   {
-    date: "January 25, 2025 11:59 PM",
-    title: "Submission Deadline",
-    description: "Submit your project and make it count.",
+    date: "January 16, 2025 09:00 AM",
+    title: "Round 1 Results",
+    description: "Check your email for the results of the first round.",
   },
   {
-    date: "January 28, 2025 10:00 AM",
-    title: "Evaluation & Top 10 Announcement",
-    description: "Judges will evaluate the submissions and announce the finalists.",
+    date: "January 18, 2025 09:00 AM",
+    title: "Offline Grand Finale",
+    description: "Join us at the Microsoft office,Noida for the final showdown.",
   },
   {
-    date: "January 30, 2025 10:00 AM",
-    title: "Final Round & Closing Ceremony",
-    description: "Present your project in the finals and celebrate the winners.",
+    date: "January 18, 2025 03:00 PM",
+    title: "Winner Announcement And Closing Ceremony",
+    description: "Celebrate the winners and the end of Clash of Code v2.0.",
   },
 ];
 
