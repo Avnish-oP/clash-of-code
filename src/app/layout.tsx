@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Clash of Codes v1.0",
   description: "Clash of Codes is a coding competition for developers. Join us for a day of fun and coding challenges.",
   icons: {
-    icon: "/images/logo.svg",
+    icon: "/images/logo.png",
   },
 };
 

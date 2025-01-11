@@ -17,13 +17,13 @@ export default function Home() {
     <div className="">
       <Hero2 />
       <div id="about"><AboutClashOfCode /></div>
-      <TitleSponsor />
+      {/* <TitleSponsor /> */}
       <Tracks />
-      <div id="blockchain"><SpecialBounty /></div>
+      {/* <div id="blockchain"><SpecialBounty /></div> */}
       <div id="schedule"><Schedule /></div>
       <div id="prizes"><Prizes /></div>
-      <GoldSponsor />
-      <div id="sponsors"><Sponsors /></div>
+      {/* <GoldSponsor /> */}
+      {/* <div id="sponsors"><Sponsors /></div> */}
       <Organizers />
       <div id="faq"><FAQ /></div>
     </div>
