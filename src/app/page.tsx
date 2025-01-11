@@ -13,7 +13,7 @@ import Tracks from "@/components/Tracks";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Hero2 />
       <div id="about"><AboutClashOfCode /></div>
       {/* <TitleSponsor /> */}

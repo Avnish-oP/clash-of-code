@@ -55,7 +55,7 @@ export default function Schedule() {
 
   return (
     <section className="relative py-20 bg-gradient-to-b from-black via-gray-900 to-gray-800 text-white overflow-hidden">
-      <div className="container mx-auto px-6 text-center">
+      <div className="container mx-auto px-6 text-center overflow-hidden">
         <motion.h2
           className="text-4xl md:text-5xl font-bold font-clash-of-clans text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-12"
           initial={{ opacity: 0, y: -30 }}

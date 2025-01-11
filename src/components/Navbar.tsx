@@ -12,7 +12,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      className="fixed transparent backdrop-blur-sm py-4 px-6 w-full z-20"
+      className="fixed overflow-hidden transparent backdrop-blur-sm py-4 px-6 w-full z-20"
     >
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-8 items-center">
           <NavItem href="#about" title="About" />
-          <NavItem href="https://dorahacks.io/hackathon/cocv1/detail" title="Register" />
+          <NavItem href="https://dorahacks.io/hackathon/cocv2/detail" title="Register" />
           <NavItem href="#blockchain" title="Bounty Hunt" />
           <NavItem href="#schedule" title="Schedule" />
           <NavItem href="#prizes" title="Prizes" />
